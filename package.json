@@ -4,12 +4,16 @@
   "description": "odin project to do list",
   "main": "ToDoList.js",
   "scripts": {
+    "build": "webpack",                           
+    "predeploy": "npm run build",                  
+    "deploy": "gh-pages -d dist",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "homepage": "https://TilenWrnc.github.io/ToDoList", 
   "license": "ISC",
   "devDependencies": {
     "webpack": "^5.92.1",
-    "webpack-cli": "^5.1.4"
+    "webpack-cli": "^5.1.4",
+    "gh-pages": "^6.1.1"
   }
 }
