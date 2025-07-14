@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List</title>
+    <link rel="stylesheet" href="./ToDoList.css">
+</head>
+<body>
+    <div class="main-container">
+        <div id="new-task-modal" class="new-task-modal-closed">
+            <div class="pop-up-form" >
+                <form class="new-task-form">
+                    <h1>
+                        <label for="title">TITLE</label>
+                        <input type="text" id="title" name="title" required>
+                    </h1>
+                    <h1>
+                        <label for="description">DESCRIPTION</label>
+                        <textarea name="description" id="description"></textarea>
+                    </h1>
+                    <h1>
+                        <label for="due-date">DUE DATE</label>
+                        <input type="date" id="due-date" name="due-date" required>
+                    </h1>
+                    <h1>
+                        <label for="priority">PRIORITY</label>
+                        <input type="checkbox" id="priority" name="priority">
+                    </h1>
+
+                    <button type="submit" class="create-task-button">CREATE TASK</button>
+                </form>
+                <button class=close-popup-button>X</button>
+
+            </div>
+        </div>
+
+        <div id="new-project-modal" class="new-project-modal-closed">
+            <div class="new-project-form">
+                <form id="new-project-form">
+                    <h1>
+                        <label for="project-input" class="new-project-label">NAME</label>
+                        <input type="text" id="project-input" name="project" required max="25"> 
+                    </h1>
+                    <button type="submit" class="add-project-button">ADD</button>
+                </form>
+                <button class="close-new-project-form-button">X</button>
+            </div>
+        </div>
+
+        <div class="sidebar">
+            <button id="all-tasks" class="project" value="ALL TASKS">ALL TASKS</button>
+            <button id="important" class="project" value="IMPORTANT">IMPORTANT</button>
+            <button class="new-project-button">+NEW PROJECT</button>
+            <div class="project-container">
+                <h1 class="project-intro">PROJECTS</h1>
+            </div>
+            <div class="footer">
+                <h1>Made by @Wrncow</h1>
+            </div>
+        </div>
+        <div class="main">
+            <div class="intro">
+                <button class="new-task-button">NEW TASK</button>
+                <h1 class="title">TO DO LIST</h1>
+            </div>
+            <div > 
+                <h1 class="dos">ALL TASKS</h1>
+                <div class="task-container"></div>
+            </div>
+            
+        </div>
+    </div>
+    <script src="./main.js"></script>
+</body>
+</html>
